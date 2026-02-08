@@ -4,8 +4,8 @@ import { RefreshCw, MapPin, Calendar } from 'lucide-react';
 import { CITIES, getBaseDateTime } from '../utils/weatherUtils';
 import WeatherCard from './WeatherCard';
 
-// API Key - 실제 운영 환경에서는 .env 파일에서 관리해야 합니다.
-const SERVICE_KEY = '실제_API_키_입력';
+// API Key - .env 파일의 VITE_KMA_SERVICE_KEY 환경변수를 사용합니다.
+const SERVICE_KEY = import.meta.env.VITE_KMA_SERVICE_KEY;
 
 const WeatherDashboard = () => {
     const [weatherData, setWeatherData] = useState([]);
